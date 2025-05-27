@@ -1,3 +1,31 @@
 # In this section, we will look at handling of date and time types data and its importance in tasks like scheduling, time-based-actions,etc  
 
+> DATE MANIPULATION
+
+>> date_add
+    select date_add(curdate(),interval 1 day) "tomorrow date";  -- finding date after 1 day
+
+  * With similar concept we can find out the date after 1 month / 2 years / or after 15 days :-
+
+    select date_add(curdate(),interval 1 month) "date after 1 month";  -- finding date after 1 month
+
+>> date_diff : works like above 
+
+>> extract
+    select extract(year from curdate()); -- '2025'  -- for curdate 2025-05-27
+ 
+  * With similar concept, we can find day / month / year from a date
+    select extract(month from curdate()); -- '5'
+    select extract(day from curdate()); -- '27'
+
+>>date_format
+    select date_format('2025-02-23', '%d - %b - %Y');
+
+   * There are several other used like - %Y (4-digit yr), %y (2-digit yr), %m (2-digit month), %b (abbreviated month name), etc.
+
+
+
+  
+
+
 
